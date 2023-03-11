@@ -25,10 +25,14 @@ print(s.recv(1024))
 tb = [[i.replace(" ", "").split("|")] for i in tb.split('\n')]
 
 found = []
-
+to_pop = []
 for i in range(len(tb)):
     if i%2 == 0:
-        tb.pop(i)
+        to_pop.append(i)
+
+to_pop.sort(reverse=True)
+for n in to_pop:
+    tb.pop(n)
 
 print(tb)
 
