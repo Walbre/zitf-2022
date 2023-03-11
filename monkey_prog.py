@@ -22,7 +22,7 @@ print(tb)
 
 print(s.recv(1024))
 
-tb = [[i.replace(" ", "").split("|")] for i in tb.split('\n')]
+tb = [[i.replace(" ", "").split("│")] for i in tb.split('\n')]
 
 print(tb)
 
