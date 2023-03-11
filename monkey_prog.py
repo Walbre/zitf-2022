@@ -29,7 +29,7 @@ print(tb)
 found = []
 to_pop = []
 for i in range(len(tb)):
-    if i%2 == 0:
+    if i%2 == 0 or tb[i] == ['']:
         to_pop.append(i)
 
 to_pop.sort(reverse=True)
