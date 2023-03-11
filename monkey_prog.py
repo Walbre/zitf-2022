@@ -17,10 +17,11 @@ for i in range(6):
     s.recv(1024)
 
 
-tb = s.recv(4096)
+tb = s.recv(65536)
+print(tb.decode())
 
 for i in range(124):
-    a = s.recv(4096)
+    a = s.recv(65536)
     tb += a
     print(a.decode())
 
