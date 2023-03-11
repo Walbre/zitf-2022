@@ -19,10 +19,13 @@ for i in range(6):
 print("Start")
 tb = s.recv(65536)
 
-for i in range(70):
+for i in range(69):
     a = s.recv(65536)
     tb += a
-    print(a==b"")
+    if a==b"":
+        print("stoping loop")
+        break
+
     print(i)
 
 # try:
