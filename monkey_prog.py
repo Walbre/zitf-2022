@@ -70,6 +70,8 @@ for i in range(len(tb)):
             if tb[i][j] != "x" and tb[i][j] != '':
                 found.append((tb[i][j], j-1, i))
                 print(f"found {tb[i][j]} at x={j-1}, y={i}")
+    else:
+        print("skipping")
 
 found.sort(key=lambda x:int(x[0]))
 print(found)
