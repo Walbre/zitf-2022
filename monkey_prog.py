@@ -19,7 +19,7 @@ for i in range(6):
 print("Start")
 tb = s.recv(65536)
 
-for i in range(69):
+for i in range(90):
     a = s.recv(65536)
     tb += a
     if a==b"":
