@@ -57,5 +57,6 @@ print(end_string)
 s.send(end_string.encode('utf-8'))
 
 print(s.recv(1024))
+print(s.recv(1024))
 
 
