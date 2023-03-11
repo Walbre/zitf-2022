@@ -20,7 +20,7 @@ for i in range(6):
 tb = s.recv(65536)
 print(tb.decode())
 
-for i in range(54):
+for i in range(55):
     a = s.recv(65536)
     tb += a
     print(a==b"")
