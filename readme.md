@@ -13,11 +13,11 @@ I solved 6 challenges during this ctf. And I'll do the write up of 5 of them (th
 
 Here are the write up, enjoy :
 
-- [MovieDB]()
+- [MovieDB](./writeups/MovieDB/)
 
-- [Website Render 1 and 2]()
+- [Website Render 1 and 2](./writeups/Website_Render_1%262/)
 
-- [Ziro's lab 1 and 2]()
+- [Ziro's lab 1 and 2](./writeups/Ziros_lab_1%262/)
 
 
 The code of Gamepanzee is [here](./gamepanzee/)
