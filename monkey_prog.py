@@ -3,6 +3,8 @@ import socket
 host = "10.0.0.4"
 port = 8095
 
+socket.setdefaulttimeout(2)
+
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((host, port))
 
@@ -15,7 +17,11 @@ for i in range(6):
     s.recv(1024)
 
 
-tb = s.recv(65536).decode("utf-8", 'ignore')
+try:
+    while True:
+        tb += s.recv(2048)
+    except:
+        tb.decode('utf-8')
 
 print(tb)
 
