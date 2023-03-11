@@ -17,6 +17,7 @@ for i in range(6):
     s.recv(1024)
 
 
+tb = s.recv(2048)
 try:
     while True:
         tb += s.recv(2048)
