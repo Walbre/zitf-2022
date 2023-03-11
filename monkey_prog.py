@@ -21,12 +21,13 @@ tb = s.recv(2048)
 try:
     while True:
         tb += s.recv(2048)
+
 except:
-    tb.decode('utf-8')
+    tb = tb.decode('utf-8')
+    tb.replace("Give me the path as following:\n  p1|p2|p3|...|pn\nWhere px is a point describe like that:\n  x,y\n> Err : Writing/reading failed\nClosing connection\n", ' ')
 
 print(tb)
 
-print(s.recv(1024))
 
 # │ and |
 tb = [i.replace(" ", "|").split("") for i in tb.split('\n')]
