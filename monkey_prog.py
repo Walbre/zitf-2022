@@ -19,7 +19,7 @@ for i in range(6):
 
 tb = s.recv(2048)
 
-for i in range(122):
+for i in range(123):
     tb += s.recv(2048)
 
 # try:
@@ -37,6 +37,7 @@ tb = tb.decode('utf-8', 'ignore')
 
 print(tb)
 
+s.recv(1024)
 
 # │ and |
 tb = [i.replace(" ", "│").split("") for i in tb.split('\n')]
