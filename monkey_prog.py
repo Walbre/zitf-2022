@@ -16,10 +16,10 @@ s.send("2\n".encode('utf-8'))
 for i in range(6):
     s.recv(1024)
 
-
+print("Start")
 tb = s.recv(65536)
 
-for i in range(54):
+for i in range(55):
     a = s.recv(65536)
     tb += a
     print(a==b"")
