@@ -62,6 +62,8 @@ to_pop.sort(reverse=True)
 for n in to_pop:
     tb.pop(n)
 
+tb = tb[:-1]
+
 print(tb)
 
 for i in range(len(tb)):
