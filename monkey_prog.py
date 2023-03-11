@@ -15,11 +15,12 @@ for i in range(6):
     s.recv(1024)
 
 
-tb = s.recv(1024).decode("utf-8", 'ignore')
+tb = s.recv(2048).decode("utf-8", 'ignore')
 
 print(tb)
 
-print(s.recv(1024).decode("utf-8", 'ignore'))
+print(s.recv(1024))
+
 # │ and |
 tb = [i.replace(" ", "|").split("") for i in tb.split('\n')]
 
