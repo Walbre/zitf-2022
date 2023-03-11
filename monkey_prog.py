@@ -39,6 +39,8 @@ for _,x,y in found:
 
 end_string = end_string[:-1] + "\n"
 
+print(end_string)
+
 s.send(end_string.encode('utf-8'))
 
 print(s.recv(1024))
