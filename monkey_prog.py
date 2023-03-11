@@ -70,7 +70,7 @@ for i in range(len(tb)):
             found.append((tb[i][j], j-1, i))
             print(f"found {tb[i][j]} at x={j-1}, y={i}")
 
-found.sort(key=lambda x:x[0])
+found.sort(key=lambda x:int(x[0]))
 print(found)
 
 end_string = ""
