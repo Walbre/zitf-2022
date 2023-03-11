@@ -20,7 +20,9 @@ for i in range(6):
 tb = s.recv(2048)
 try:
     while True:
-        tb += s.recv(2048)
+        a = s.recv(2048)
+        print(a)
+        tb += a
 
 except:
     tb = tb.decode('utf-8')
