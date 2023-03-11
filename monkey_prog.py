@@ -22,7 +22,7 @@ tb = s.recv(65536)
 for i in range(90):
     a = s.recv(65536)
     tb += a
-    if a==b"":
+    if a.decode('utf-8', 'ignore').endswith("x,y\n>"):
         print("stoping loop")
         break
 
