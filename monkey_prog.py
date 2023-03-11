@@ -27,13 +27,13 @@ try:
 
 except:
     tb = tb.decode('utf-8')
-    tb.replace("Give me the path as following:\n  p1|p2|p3|...|pn\nWhere px is a point describe like that:\n  x,y\n> Err : Writing/reading failed\nClosing connection\n", ' ')
+    tb.replace("Give me the path as following:\n  p1|p2|p3|...|pn\nWhere px is a point describe like that:\n  x,y\n>", '')
 
 print(tb)
 
 
 # │ and |
-tb = [i.replace(" ", "|").split("") for i in tb.split('\n')]
+tb = [i.replace(" ", "│").split("") for i in tb.split('\n')]
 
 print(tb)
 
