@@ -15,7 +15,7 @@ for i in range(6):
     s.recv(1024)
 
 
-tb = s.recv(8192).decode("utf-8", 'ignore')
+tb = s.recv(65536).decode("utf-8", 'ignore')
 
 print(tb)
 
