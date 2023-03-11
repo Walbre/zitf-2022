@@ -19,7 +19,7 @@ for i in range(6):
 
 tb = s.recv(2048)
 
-for i in range(70):
+for i in range(100):
     tb += s.recv(2048)
 
 # try:
