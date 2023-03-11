@@ -12,6 +12,6 @@ print(s.recv(1024).decode("utf-8"))
 s.send("0\n".encode('utf-8'))
 
 for i in range(3):
-    s.recv(1024)
+    print(s.recv(1024))
 
 print(s.recv(1024))
