@@ -23,7 +23,7 @@ found = []
 for i in range(len(tb)):
     for j in range(len(tb)):
         if tb[i][j] != "x":
-            found.append(tb[i][j], i, j)
+            found.append((tb[i][j], i, j))
 
 found.sort(key=lambda x:x[0])
 
