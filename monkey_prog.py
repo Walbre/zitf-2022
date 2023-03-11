@@ -17,10 +17,10 @@ for i in range(6):
     s.recv(1024)
 
 
-tb = s.recv(1048576).decode()
+tb = s.recv(1048576)
 
 for i in range(5):
-    tb += s.recv(1048576).decode()
+    tb += s.recv(1048576)
 
 # try:
 #     while True:
@@ -32,6 +32,8 @@ for i in range(5):
 # except:
 #     tb = tb.decode('utf-8')
 #     tb.replace("Give me the path as following:\n  p1|p2|p3|...|pn\nWhere px is a point describe like that:\n  x,y\n>", '')
+
+tb = tb.decode('utf-8', 'ignore')
 
 print(tb)
 
