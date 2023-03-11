@@ -33,11 +33,12 @@ for i in range(124):
 #     tb = tb.decode('utf-8')
 
 
-tb = tb.decode('utf-8', 'ignore')
+tb = tb.decode('utf-8')
+
 
 tb = tb.replace("Give me the path as following:\n  p1|p2|p3|...|pn\nWhere px is a point describe like that:\n  x,y\n>", '')
 
-#print(tb)
+print(tb)
 
 
 # │ and |
