@@ -19,7 +19,7 @@ for i in range(6):
 print("Start")
 tb = s.recv(65536)
 
-for i in range(90):
+while True:
     a = s.recv(65536)
     tb += a
     if a.decode('utf-8', 'ignore').endswith("x,y\n> "):
