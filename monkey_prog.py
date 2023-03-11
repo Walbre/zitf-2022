@@ -22,13 +22,19 @@ print(tb)
 
 print(s.recv(1024))
 
-tb = [[i.split("|")] for i in tb.split('\n')]
+tb = [[i.replace(" ", "").split("|")] for i in tb.split('\n')]
 
 found = []
 
 for i in range(len(tb)):
+    if i%2 == 0:
+        tb.pop(i)
+
+print(tb)
+
+for i in range(len(tb)):
     for j in range(len(tb[0])):
-        if tb[i][j] != "x":
+        if tb[i][j] != "x" or ' ':
             found.append((tb[i][j], i, j))
 
 found.sort(key=lambda x:x[0])
