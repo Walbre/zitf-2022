@@ -71,6 +71,7 @@ for i in range(len(tb)):
             print(f"found {tb[i][j]} at x={j-1}, y={i}")
 
 found.sort(key=lambda x:x[0])
+print(found)
 
 end_string = ""
 for _,x,y in found:
