@@ -14,6 +14,9 @@ s.send("0\n".encode('utf-8'))
 for i in range(6):
     s.recv(1024)
 
+print(s.recv)
+print(s.recv)
+
 tb = s.recv(1024).decode('utf-8')
 
 tb = [[i.split("|")] for i in tb.split('\n')]
