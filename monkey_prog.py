@@ -21,7 +21,8 @@ tb = s.recv(2048)
 try:
     while True:
         a = s.recv(2048)
-        print(a)
+        if a == b'':
+            raise ValueError("dsbsdub")
         tb += a
 
 except:
