@@ -15,7 +15,7 @@ for i in range(6):
     s.recv(1024)
 
 
-tb = s.recv(1024).decode('ascii')
+tb = s.recv(1024).decode()
 
 print(tb)
 
