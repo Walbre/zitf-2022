@@ -65,10 +65,11 @@ for n in to_pop:
 print(tb)
 
 for i in range(len(tb)):
-    for j in range(len(tb[0])):
-        if tb[i][j] != "x" and tb[i][j] != '':
-            found.append((tb[i][j], j-1, i))
-            print(f"found {tb[i][j]} at x={j-1}, y={i}")
+    if len(tb[i]) > 1:
+        for j in range(len(tb[0])):
+            if tb[i][j] != "x" and tb[i][j] != '':
+                found.append((tb[i][j], j-1, i))
+                print(f"found {tb[i][j]} at x={j-1}, y={i}")
 
 found.sort(key=lambda x:int(x[0]))
 print(found)
