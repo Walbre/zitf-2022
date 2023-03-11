@@ -48,7 +48,7 @@ print(tb)
 
 
 # │ and |
-tb = [i.replace(" ", "│").split("") for i in tb.split('\n')]
+tb = [i.replace(" ", "").split("│") for i in tb.split('\n')]
 
 print(tb)
 
