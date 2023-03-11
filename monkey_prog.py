@@ -41,7 +41,7 @@ print(tb)
 for i in range(len(tb)):
     for j in range(len(tb[0])):
         if tb[i][j] != "x" and tb[i][j] != '':
-            found.append((tb[i][j], j, len(tb)-i))
+            found.append((tb[i][j], j-1, len(tb)-i-1))
             print(f"found {tb[i][j]} at x={j}, y={len(tb)-i}")
 
 found.sort(key=lambda x:x[0])
