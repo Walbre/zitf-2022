@@ -24,6 +24,8 @@ print(s.recv(1024))
 
 tb = [[i.replace(" ", "").split("|")] for i in tb.split('\n')]
 
+print(tb)
+
 found = []
 to_pop = []
 for i in range(len(tb)):
