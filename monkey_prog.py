@@ -11,7 +11,7 @@ s.connect((host, port))
 print(s.recv(1024).decode("utf-8"))
 print(s.recv(1024).decode("utf-8"))
 
-s.send("1\n".encode('utf-8'))
+s.send("2\n".encode('utf-8'))
 
 for i in range(6):
     s.recv(1024)
