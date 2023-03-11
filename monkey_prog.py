@@ -40,8 +40,8 @@ print(tb)
 
 for i in range(len(tb)):
     for j in range(len(tb[0])):
-        if tb[i][j] != "x" or ' ':
-            found.append((tb[i][j], i, j))
+        if tb[i][j] != "x" or '':
+            found.append((tb[i][j], j, i))
 
 found.sort(key=lambda x:x[0])
 
