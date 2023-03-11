@@ -17,7 +17,7 @@ for i in range(6):
     s.recv(1024)
 
 
-tb = s.recv(262144)
+tb = s.recv(1048576).decode()
 # try:
 #     while True:
 #         a = s.recv(2048)
