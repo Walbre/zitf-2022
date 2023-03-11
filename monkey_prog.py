@@ -19,7 +19,7 @@ tb = s.recv(1024).decode("utf-8", 'ignore')
 
 print(tb)
 
-print(s.recv(1024))
+print(s.recv(1024).decode("utf-8", 'ignore'))
 # │ and |
 tb = [i.replace(" ", "|").split("") for i in tb.split('\n')]
 
