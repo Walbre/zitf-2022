@@ -29,7 +29,7 @@ found.sort(key=lambda x:x[0])
 
 end_string = ""
 for _,x,y in found:
-    endstring += str(x) + str(y) + " "
+    end_string += str(x) + str(y) + " "
 
 end_string = end_string[:-1] + "\n"
 
