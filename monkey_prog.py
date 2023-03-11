@@ -11,7 +11,30 @@ print(s.recv(1024).decode("utf-8"))
 
 s.send("0\n".encode('utf-8'))
 
-for i in range(3):
-    print(s.recv(1024))
+for i in range(6):
+    s.recv(1024)
+
+tb = s.recv(1024).decode('utf-8')
+
+tb = [[i.split("|")] for i in tb.split('\n')]
+
+found = []
+
+for i in range(len(tb)):
+    for j in range(len(tb)):
+        if tb[i][j] != "x":
+            found.appen(tb[i][j], i, j)
+
+found.sort(key=lambda x:x[0])
+
+end_string = ""
+for _,x,y in found:
+    endstring += str(x) + str(y) + " "
+
+end_string = end_string[:-1] + "\n"
+
+s.send(end_string.encode('utf-8'))
 
 print(s.recv(1024))
+
+
