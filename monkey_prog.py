@@ -22,7 +22,7 @@ tb = s.recv(65536)
 for i in range(90):
     a = s.recv(65536)
     tb += a
-    if a.decode('utf-8', 'ignore').endswith("x,y\n>"):
+    if a.decode('utf-8', 'ignore').endswith("x,y\n> "):
         print("stoping loop")
         break
 
@@ -42,7 +42,7 @@ for i in range(90):
 tb = tb.decode('utf-8', 'ignore')
 
 
-tb = tb.replace("\nGive me the path as following:\n  p1|p2|p3|...|pn\nWhere px is a point describe like that:\n  x,y\n>", '')
+#tb = tb.replace("\nGive me the path as following:\n  p1|p2|p3|...|pn\nWhere px is a point describe like that:\n  x,y\n>", '')
 
 print(tb)
 
