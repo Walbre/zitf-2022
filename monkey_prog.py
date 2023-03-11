@@ -19,7 +19,7 @@ for i in range(6):
 
 tb = s.recv(65536)
 
-for i in range(53):
+for i in range(54):
     a = s.recv(65536)
     tb += a
     print(a==b"")
