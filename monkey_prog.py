@@ -17,17 +17,17 @@ for i in range(6):
     s.recv(1024)
 
 
-tb = s.recv(2048)
-try:
-    while True:
-        a = s.recv(2048)
-        if a == b'':
-            raise ValueError("dsbsdub")
-        tb += a
-
-except:
-    tb = tb.decode('utf-8')
-    tb.replace("Give me the path as following:\n  p1|p2|p3|...|pn\nWhere px is a point describe like that:\n  x,y\n>", '')
+tb = s.recv(262144)
+# try:
+#     while True:
+#         a = s.recv(2048)
+#         if a == b'':
+#             raise ValueError("dsbsdub")
+#         tb += a
+#
+# except:
+#     tb = tb.decode('utf-8')
+#     tb.replace("Give me the path as following:\n  p1|p2|p3|...|pn\nWhere px is a point describe like that:\n  x,y\n>", '')
 
 print(tb)
 
