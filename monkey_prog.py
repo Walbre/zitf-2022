@@ -24,6 +24,7 @@ for i in range(124):
     a = s.recv(65536)
     tb += a
     print(a.decode())
+    print(i)
 
 # try:
 #     while True:
