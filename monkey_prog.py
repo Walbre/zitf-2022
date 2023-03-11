@@ -20,7 +20,7 @@ for i in range(6):
 tb = s.recv(2048)
 
 for i in range(124):
-    tb += s.recv(1024)
+    tb += s.recv(2048)
 
 # try:
 #     while True:
@@ -31,13 +31,13 @@ for i in range(124):
 #
 # except:
 #     tb = tb.decode('utf-8')
-#     tb.replace("Give me the path as following:\n  p1|p2|p3|...|pn\nWhere px is a point describe like that:\n  x,y\n>", '')
+
+tb = tb.replace("Give me the path as following:\n  p1|p2|p3|...|pn\nWhere px is a point describe like that:\n  x,y\n>", '')
 
 tb = tb.decode('utf-8', 'ignore')
 
-print(tb)
+#print(tb)
 
-s.recv(1024)
 
 # │ and |
 tb = [i.replace(" ", "│").split("") for i in tb.split('\n')]
