@@ -16,13 +16,13 @@ for i in range(6):
 
 
 
-tb = s.recv(1024).decode('utf-8')
+tb = s.recv(1024).decode('ascii')
 
 print(tb)
 
 print(s.recv(1024))
-
-tb = [i.replace(" ", "").split("│") for i in tb.split('\n')]
+# │ and |
+tb = [i.replace(" ", "|").split("") for i in tb.split('\n')]
 
 print(tb)
 
