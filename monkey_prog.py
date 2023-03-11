@@ -14,10 +14,13 @@ s.send("0\n".encode('utf-8'))
 for i in range(6):
     s.recv(1024)
 
-print(s.recv(1024))
-print(s.recv(1024))
+
 
 tb = s.recv(1024).decode('utf-8')
+
+print(tb)
+
+print(s.recv(1024))
 
 tb = [[i.split("|")] for i in tb.split('\n')]
 
